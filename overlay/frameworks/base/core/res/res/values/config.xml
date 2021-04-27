@@ -432,7 +432,7 @@
     <integer name="config_screenBrightnessForVrSettingDefault">7</integer>
     <integer name="config_screenBrightnessForVrSettingMinimum">6</integer>
     <integer name="config_screenBrightnessForVrSettingMaximum">7</integer>
-    
+
 
     <!-- Minimum screen brightness setting allowed by the power manager.
          The user is forbidden from setting the brightness below this level. -->
@@ -601,7 +601,7 @@
 
     <!--  Maximum number of supported users -->
     <integer name="config_multiuserMaximumUsers">4</integer>
-    
+
     <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
          when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
          where: IDs are unique per device, Modality as defined in BiometricAuthenticator.java,
@@ -633,7 +633,7 @@
     <!-- The bounding path of the cutout region of the main built-in display.
          Must either be empty if there is no cutout region, or a string that is parsable by
          {@link android.util.PathParser}.
- 
+
          The path is assumed to be specified in display coordinates with pixel units and in
          the display's native orientation, with the origin of the coordinate system at the
          center top of the display.
@@ -661,4 +661,12 @@
          black in software (to avoid aliasing or emulate a cutout that is not physically existent).
         -->
     <bool name="config_fillMainBuiltInDisplayCutout">true</bool>
+
+    <bool name="config_cleanupUnusedFingerprints">true</bool>
+
+  <!-- Shows the required view for in-display fingerprint -->
+ <bool name="config_supportsInDisplayFingerprint">true</bool>
+
+ <!-- Show a custom view for FOD -->
+ <bool name="config_needCustomFODView">true</bool>
 </resources>
