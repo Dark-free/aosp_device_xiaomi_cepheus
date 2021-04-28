@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.lights-service_xiaomi.sm6150"
+#define LOG_TAG "android.hardware.lights-service_cepheus"
 
 #include "Lights.h"
 #include <android-base/file.h>
@@ -97,7 +97,7 @@ Lights::Lights() {
 
     std::string buf;
 
-   if (ReadFileToString(WHITE_ATTR(max_brightness), &buf)) {
+    if (ReadFileToString(WHITE_ATTR(max_brightness), &buf)) {
         max_led_brightness_ = std::stoi(buf);
     } else {
         max_led_brightness_ = kDefaultMaxLedBrightness;
