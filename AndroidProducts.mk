@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/derp_cepheus.mk
+    $(LOCAL_DIR)/kangos_cepheus.mk
 
 COMMON_LUNCH_CHOICES := \
-    derp_cepheus-user \
-    derp_cepheus-userdebug \
-    derp_cepheus-eng
+    kangos_cepheus-user \
+    kangos_cepheus-userdebug \
+    kangos_cepheus-eng

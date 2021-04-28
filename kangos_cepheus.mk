@@ -13,21 +13,30 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+PRODUCT_PRODUCT_PROPERTIES += \
+  ro.kangos.maintainer=freesoul00 \
+  ro.kangos.cpu=SDM855
+
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/xiaomi/cepheus/device.mk)
 
-# Inherit some common DerpFest stuff.
-$(call inherit-product, vendor/derp/config/common_full_phone.mk)
+# Inherit some common kangosFest stuff.
+$(call inherit-product, vendor/kangos/config/common.mk)
 
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1080
 
-TARGET_INCLUDE_PIXEL_CHARGER := true
-
-EXTRA_FOD_ANIMATIONS := true
+# Inherit some common KangOS stuff.
+KANGOS_BUILDTYPE := OFFICIAL
+TARGET_USES_BLUR := true
+TARGET_GAPPS_ARCH := arm64
+TARGET_INCLUDE_STOCK_ARCORE := true
+USE_GAPPS := true
+TARGET_OPLAUNCHER := true
+$(call inherit-product, vendor/kangos/config/common.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := derp_cepheus
+PRODUCT_NAME := kangos_cepheus
 PRODUCT_DEVICE := cepheus
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 9
