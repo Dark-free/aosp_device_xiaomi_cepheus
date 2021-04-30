@@ -34,8 +34,8 @@
     <!-- Whether device has a physical display cutout -->
     <bool name="config_physicalDisplayCutout">true</bool>
 
-    <!-- FOD fingerprint scanner -->
-    <bool name="config_needCustomFODView">true</bool>
+    <!-- Shows the required view for in-display fingerprint -->
+    <bool name="config_supportsInDisplayFingerprint">true</bool>
 
     <!-- The location of the devices physical tri state switch
          0: Left side
@@ -66,4 +66,19 @@
     <string-array name="config_biometric_sensors" translatable="false" >
         <item>0:2:15</item> <!-- ID0:Fingerprint:Strong -->
     </string-array>
+
+    <!-- Shows the required view for in-display fingerprint -->
+    <bool name="config_needCustomFODView">true</bool>
+
+    <!-- Pocket Lock -->
+    <bool name="config_pocketUseLightSensor">false</bool>
+
+    <!-- Smart Charging -->
+    <string name="config_SmartChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/input_suspend</string>
+    <string name="config_SmartChargingSuspendValue" translatable="false">1</string>
+    <string name="config_SmartChargingResumeValue" translatable="false">0</string>
+
+    <!-- Whether device supports an alt. ambient display -->
+    <bool name="config_alt_ambient_display">true</bool>
+    
 </resources>
