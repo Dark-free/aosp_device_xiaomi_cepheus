@@ -1,2 +1,6 @@
 # clean_scratch_files
 /system/bin/clean_scratch_files                 u:object_r:clean_scratch_files_exec:s0
+
+# Metadata apex
+/data/vendor/metadata_apex(/.*)?              u:object_r:apex_metadata_file:s0
+/data/vendor/metadata_apex/sessions(/.*)?     u:object_r:apex_metadata_file:s0
