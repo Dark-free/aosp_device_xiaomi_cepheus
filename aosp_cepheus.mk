@@ -18,6 +18,7 @@ $(call inherit-product, device/xiaomi/cepheus/device.mk)
 
 # Inherit some common aosp stuff.
 $(call inherit-product, vendor/aosp/config/common.mk)
+$(call inherit-product, vendor/aosp/config/telephony.mk)
 
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1080
@@ -32,6 +33,7 @@ PRODUCT_DEVICE := cepheus
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 9
 PRODUCT_MANUFACTURER := Xiaomi
+WITH_GAPPS	:= true
 
 BUILD_FINGERPRINT := "google/redfin/redfin:11/RQ2A.210405.005/7181113:user/release-keys"
 
